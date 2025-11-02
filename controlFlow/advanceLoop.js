@@ -60,3 +60,14 @@ const mybk = books.filter((bk) => bk.genre === "History")
 // console.log(mybk)
 mybk.filter((bk)=> bk.publish >= 1930)
 console.log(mybk)
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sumArr = array.map((items) => items + 10)
+// console.log(sumArr);
+
+
+const chaiArray = array
+                    .map((num) => num *10)
+                    .map((num) => num +1)
+                    .filter((num) => num > 50)
+console.log(chaiArray)

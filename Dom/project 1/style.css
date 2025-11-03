@@ -1,0 +1,74 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #dcdcdc;
+    padding: 8px 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Color boxes */
+.color-boxes {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#gray {
+    background-color: gray;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+/* Instruction text */
+h2 {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Youtube channel</a>
+    </nav>
+    <div class="contener">
+        <h1>BMI Calculator</h1>
+        <form>
+            <input type="text" placeholder="enter your height" id="heights">
+            <label for="heights">Height in CM</label>
+            <input type="text" placeholder="enter your weight " id="weights">
+            <label for="weights">Weight in CM</label>
+            <button>Calculate</button>
+            <div id="result"></div>
+            <div id="weight-guide"></div>
+            <h2>BMI weight guide :-</h2>
+            <p id="underWeight"></p>
+            <p id="NormalWeight"></p>
+            <p id="OverWeight"></p>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

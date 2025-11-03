@@ -1,0 +1,71 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #dcdcdc;
+    padding: 8px 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.contener {
+    background-color: gray;
+    height: 93vh;
+    justify-items: center;
+}
+
+h1 {
+    padding-top: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#heights {
+    padding: 8px;
+    width: 50vh;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+#weights {
+    padding: 8px;
+    width: 50vh;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px;
+    width: 25vh;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+h2 {
+    margin-top: 20px;
+}

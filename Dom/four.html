@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | With me</title>
+</head>
+
+<body>
+    <h1>
+        Hello new list create
+    </h1>
+    <ul class="lang">
+        <li>
+            java script
+        </li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLanguage("Python")
+    function addsLanguage(langname) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.lang').appendChild(li)
+    }
+    addsLanguage("Type Script")
+
+    // Edit Text 
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = 'Java'                                // this is not optimize 
+    const newLi = document.createElement('li')
+    newLi.textContent = 'Java'
+    secondLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>HTML</li>'
+
+    // remove
+    const lastRemov = document.querySelector("li:last-child")
+    lastRemov.remove()
+</script>
+
+</html>

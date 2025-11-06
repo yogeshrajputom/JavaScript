@@ -16,13 +16,13 @@
     const seyDate = (str) => {
         console.log(str, Date.now());
     }
+    let intervalId;
     const changeDate= document.getElementById("start").addEventListener("click", () => {
-        const date = setInterval(seyDate, 1000, "Hi")
+        intervalId = setInterval(seyDate, 1000, "Hi")
+    })
          document.getElementById("stop").addEventListener("click", () => {
-        clearInterval(date)
+        clearInterval(intervalId)
     })
-    })
-   
    
 </script>
 

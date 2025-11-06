@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Press Box Highlight</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+    background: #444;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+
+  .active {
+    background: #00c853; /* Green */
+    box-shadow: 0 0 20px #00ff80;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box" id="A">A</div>
+  <div class="box" id="B">B</div>
+  <div class="box" id="C">C</div>
+  <div class="box" id="D">D</div>
+  <div class="box" id="E">E</div>
+</div>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  const key = e.key.toUpperCase(); // A, B, C, D
+  const box = document.getElementById(key);
+
+  // Reset all boxes first
+  document.querySelectorAll(".box").forEach(b => b.classList.remove("active"));
+
+  // If pressed key is one of A, B, C, D
+  if (box) {
+    box.classList.add("active");
+  }
+});
+</script>
+
+</body>
+</html>

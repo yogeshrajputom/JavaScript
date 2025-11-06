@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Test</title>
 </head>
+
 <body style="background-color: gray;">
-    <div>
+    <div id="images">
         <h1>
             Event Testing Demo Page
         </h1>
         <ul>
-            <li><img id="pc" width="300px" src="https://images.pexels.com/photos/3521937/pexels-photo-3521937.jpeg" alt="PC"></li>
-            <li><img id="macbook" width="300px" src="https://images.pexels.com/photos/2657669/pexels-photo-2657669.jpeg" alt="macbook"></li>
-            <li><img id="headset" width="300px" src="https://images.pexels.com/photos/7709217/pexels-photo-7709217.jpeg" alt="headset"></li>
-            <li><img id="mac" width="300px" src="https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg" alt="mac mini"></li>
-            <li><img id="keybord" width="300px" src="https://images.pexels.com/photos/7915529/pexels-photo-7915529.jpeg" alt="keyboard"></li>
+            <li><img id="pc" width="300px" src="https://images.pexels.com/photos/3521937/pexels-photo-3521937.jpeg"
+                    alt="PC"></li>
+            <li><img id="macbook" width="300px" src="https://images.pexels.com/photos/2657669/pexels-photo-2657669.jpeg"
+                    alt="macbook"></li>
+            <li><img id="headset" width="300px" src="https://images.pexels.com/photos/7709217/pexels-photo-7709217.jpeg"
+                    alt="headset"></li>
+            <li><img id="mac" width="300px" src="https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg"
+                    alt="mac mini"></li>
+            <li><img id="keybord" width="300px" src="https://images.pexels.com/photos/7915529/pexels-photo-7915529.jpeg"
+                    alt="keyboard"></li>
             <li><a href="https://google.com" id="google">Google </a></li>
         </ul>
+        <input type="text" id="inputBox" placeholder="Type something...">
     </div>
 </body>
 <script>
@@ -32,11 +40,49 @@
     // target, toElement, srcElement, currentTarget
     // clientX, clientY, screenX, screenY
     // altKey, ctrlKey, shiftKey, keyCode
-    
 
-    document.getElementById('macbook').addEventListener('click', function(e){
-        alert('i use addEventListener')
-    })
 
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //     console.log("clicked inside the Ul");
+    // })
+
+    // document.getElementById('macbook').addEventListener('click', (e) => {
+    //     console.log("macbook clicked ");                                        // bubbling present in the click
+    // }, true)
+
+    // stop the bubbling  propogetion 
+    //  document.getElementById('macbook').addEventListener('click', (e) => {
+    //     console.log("macbook clicked "); 
+    //     e.stopPropagation()
+    //     }, true)
+    // 
+    // documnet.getElementById('google').addEventListener('click', (e)=>{
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // 
+    // })
+
+    // document.querySelector("#images").addEventListener('click', (e)=>{
+    //     // console.log(e.target.parentNode);
+    //     // const remove = e.target.parentNode;
+    //     // remove.remove();
+    // 
+    //     const removeIt = e.target.tagName;
+    //     if(e.target.tagName === 'IMG'){
+    //         removeIt.remove();
+    //     }
+    //     
+    // })
+    document.getElementById("inputBox").addEventListener("keydown", function (event) {
+        console.log("You pressed:", event.key);
+    });
+
+    window.addEventListener("online", () => {
+        console.log('you are online');
+        
+    });
+    window.addEventListener("offline", () => alert("You are offline!"));
+    window.addEventListener("online", () =>alert("Your are Online"));
 </script>
+
 </html>
